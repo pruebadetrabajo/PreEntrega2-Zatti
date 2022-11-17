@@ -214,6 +214,7 @@ input {
     margin: 5px;
     padding: 25px;
     display: flex;
+    width: 50%;
 }
 
 .diasDiaHoyIzq, .diasDiaMananaIzq{
