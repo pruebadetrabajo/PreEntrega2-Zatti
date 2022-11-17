@@ -54,10 +54,10 @@ body {
     align-items: center;
     justify-items: center;
     
-    }
+}
 
 .li {
-
+    flex:auto;
    }
 
 .footer {
@@ -65,6 +65,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    display: inline-block;
 }
 
 
