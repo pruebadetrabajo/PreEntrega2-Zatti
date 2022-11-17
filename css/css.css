@@ -5,6 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     /*overflow: hidden;*/
+  
 }
 
 .contenedorIndex {
@@ -29,9 +30,11 @@
     grid-area: sidebar;
 }
 
-body {
+.body.body {
     overflow-x: hidden;
     font-family: 'Noto Sans Display', sans-serif;
+    min-height: max-content;
+   
 }
 
 .contenedorHeader {
@@ -68,18 +71,18 @@ input {
     width: 30px;
  }
 
-.nav   {
+.navI   {
       width: 100%;
 }
 
-.ul {
+.ulI {
     display: flex;
     list-style: none;
     justify-content: space-between;
     
 }
 
-.li {
+.liI {
     flex:auto;
     text-align: center;
    }
@@ -146,6 +149,16 @@ input {
     animation-duration: 2s;
     animation-direction: alternate-reverse;
 }
+
+.climaImgDias {
+    width: 55px;
+    height: 55px;
+    animation-name: imagenMovimiento;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+}
+
 .gotas{
     width: 15px;
     height: 15px;
@@ -183,7 +196,7 @@ input {
 
 }
 
-/*-----dias----*/
+/*-----dias----------------------------------------------*/
 
 .contenedorDias {
     display: grid;  
@@ -193,8 +206,9 @@ input {
           "main"
           "tabla"
           "footer";
-    
 }
+
+
 
 .header {
     grid-area: header;
@@ -205,8 +219,39 @@ input {
     display: flex;
 }
 
-.sidebar {
-    grid-area: sidebar;
+.diaPorDia{
+     border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 5px;
+}
+
+.dia{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+
+    
+}
+
+.boderB{
+    border-bottom: 1px solid  rgb(213, 228, 255);
+    margin-bottom: 10px;
+}
+
+.dia>span{
+    flex:auto;
+}
+
+.dia>div{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.imgDiaPorDia {
+    width: 29px;
 }
 
 .diasDiaHoy, .diasDiaManana {
@@ -219,7 +264,6 @@ input {
 
 .diasDiaHoyIzq, .diasDiaMananaIzq{
     width: 50%;
-    /*background-color: rgb(238, 143, 1);*/
     text-align: left;
 }
 
@@ -316,9 +360,19 @@ tr {
         width: 85px;
     }
     input{
-        width: 50%;
+        width: 35%;
     }
     .mtnm>div>h3 {
         font-size: 1em;
     }
+
+    .mainDias {
+        display: block;
+    }
+
+    .diasDiaHoy, .diasDiaManana {
+        width: auto;
+    }
+
+    
 }
