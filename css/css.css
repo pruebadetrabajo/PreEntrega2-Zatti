@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.contenedorHeader {
+    display: flex;
+    border: solid 2px rgb(213, 228, 255);
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+}
+
+.imgLogo {
+    width: 150px;
+}
+
+.logo {
+   /* overflow: hidden;*/
+    width: 20%;
+  
+}
+
+.buscador {
+   text-align: center;
+    width: 80%;
+    background-color: bisque;
+    
+    /*align-items: center;
+    justify-items: center;*/
+}
+
+.nav   {
+   /* background-color: aquamarine;*/
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-items: center;
+    
+    }
+
+.li {
+
+   }
+
+.footer {
+    background-color: rgb(157, 188, 241);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.contenedorNoticias {
+   /* border: solid 2px rgba(180, 6, 6, 0.925);*/
+    width: 30%;
+}
+
+.noticias {
+    border: solid 2px rgb(213, 228, 255);
+}
+
+
+.contenedorDatos {
+    /*border: solid 1px rgb(213, 222, 238);*/
+   /* border: solid 2px black;*/
+    width: 70%;
+    
+}
+
+.homeDiaHoy {
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 25px;
+    display: flex;
+
+}
+
+.homeDiaHoyIzq {
+width: 50%;
+/*background-color: rgb(238, 143, 1);*/
+text-align: left;
+}
+
+.homeDiaHoyDer {
+    width: 50%;
+    /*background-color: antiquewhite;*/
+    text-align: right;
+}
+
+.mtnm {
+    display: flex;
+    justify-content: center;
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 5px;
+    gap: 10%;
+
+}
+
+.mtnm>div {
+    display: inline;
+
+}
+
+.mapa {
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+   /* border: solid 1px chocolate; */
+    /* flex-wrap: wrap */
+}
+
+
+
+.contenedorNoticias>div {
+    margin: 5px;
+    padding: 5px;
+   /* border: solid 1px rgb(213, 222, 238);*/
+   
+
+}
+
+/*--dias----*/
+
+.diaDeHoyManana>div {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: solid 2px rgb(213, 228, 255);
+}
+
+tr {
+    border: solid 1px black;
+}
+
+.diadeHoy>div {
+    display: inline;
+}
+
+.diadeManana>div {
+    display: inline;
+}
+
+/*---semana---*/
+
+.listaSemana {
+    margin: 5px;
+    padding: 5px;
+    border: solid 2px rgb(213, 228, 255);
+
+}
+
+.listaSemana>div {
+    display: inline;
+}
+
+/*--calendario--*/
+
+.calendario {
+
+    border: 1px solid gray;
+}
+
+.tr {
+    border: 1px solid gray;
+}
