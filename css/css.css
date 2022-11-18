@@ -24,6 +24,7 @@
 
 .main{
     grid-area: main;
+    font-family:'Noto Sans Display', sans-serif;
 }
 
 .sidebar {
@@ -323,7 +324,7 @@ tr {
 
 /*--mwdia screen--*/
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:992px) {
 
     .contenedorIndex {
         display: grid;  
