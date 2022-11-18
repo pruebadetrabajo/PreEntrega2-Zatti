@@ -5,26 +5,26 @@
     box-sizing: border-box;
     text-decoration: none;
     /*overflow: hidden;*/
-  
+
 }
 
 .contenedorIndex {
-    display: grid;  
+    display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-areas: 
-          "header header"
-          "main sidebar"
-          "footer footer";
-    
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+
 }
 
 .header {
     grid-area: header;
 }
 
-.main{
+.main {
     grid-area: main;
-    font-family:'Noto Sans Display', sans-serif;
+    font-family: 'Noto Sans Display', sans-serif;
 }
 
 .sidebar {
@@ -35,7 +35,7 @@
     overflow-x: hidden;
     font-family: 'Noto Sans Display', sans-serif;
     min-height: max-content;
-   
+
 }
 
 .contenedorHeader {
@@ -52,14 +52,14 @@
 }
 
 .logo {
-   width: 20%;
+    width: 20%;
 }
 
 .buscador {
     display: flex;
     width: 100%;
     height: 30px;
-    justify-content: center;   
+    justify-content: center;
 }
 
 input {
@@ -68,28 +68,28 @@ input {
     height: 27px;
 }
 
- .lupa {
+.lupa {
     width: 30px;
- }
+}
 
-.navI   {
-      width: 100%;
+.navI {
+    width: 100%;
 }
 
 .ulI {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    
+
 }
 
 .liI {
-    flex:auto;
+    flex: auto;
     text-align: center;
-   }
+}
 
 .footer {
-    grid-area: footer ;
+    grid-area: footer;
     background-color: rgb(157, 188, 241);
 }
 
@@ -113,7 +113,7 @@ input {
     text-align: left;
 }
 
-.temp{
+.temp {
     display: flex;
     justify-content: space-between;
     width: 25%;
@@ -121,10 +121,10 @@ input {
     justify-items: center;
 }
 
-.h1Temp{
-    flex:auto;
+.h1Temp {
+    flex: auto;
     text-align: center;
-   }
+}
 
 .homeDiaHoyDer {
     width: 50%;
@@ -138,7 +138,7 @@ input {
     border: solid 2px rgb(213, 228, 255);
     margin: 5px;
     padding: 15px 0;
-   /* gap: 10%;*/
+    /* gap: 10%;*/
 
 }
 
@@ -160,7 +160,7 @@ input {
     animation-direction: alternate-reverse;
 }
 
-.gotas{
+.gotas {
     width: 15px;
     height: 15px;
     animation-name: imagenMovimiento;
@@ -173,40 +173,42 @@ input {
     display: inline-block;
 }
 
-.tarde, .noche, .madrugada {
+.tarde,
+.noche,
+.madrugada {
     border-left: solid 2px rgb(213, 228, 255);
 }
 
 .mtnm>div {
- /*   display: inline;*/
- text-align: center;
- width: 25%;
+    /*   display: inline;*/
+    text-align: center;
+    width: 25%;
 
 }
 
 .mapa {
-   padding: 5px;
+    padding: 5px;
 }
 
 
 .contenedorNoticias>div {
     margin: 5px;
     padding: 5px;
-   /* border: solid 1px rgb(213, 222, 238);*/
-   
+    /* border: solid 1px rgb(213, 222, 238);*/
+
 
 }
 
 /*-----dias----------------------------------------------*/
 
 .contenedorDias {
-    display: grid;  
+    display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: 
-          "header"
-          "main"
-          "tabla"
-          "footer";
+    grid-template-areas:
+        "header"
+        "main"
+        "tabla"
+        "footer";
 }
 
 
@@ -215,36 +217,36 @@ input {
     grid-area: header;
 }
 
-.mainDias{
+.mainDias {
     grid-area: main;
     display: flex;
 }
 
-.diaPorDia{
-     border: solid 2px rgb(213, 228, 255);
+.diaPorDia {
+    border: solid 2px rgb(213, 228, 255);
     margin: 5px;
     padding: 5px;
 }
 
-.dia{
+.dia {
     display: flex;
     align-items: center;
     justify-items: center;
     text-align: center;
 
-    
+
 }
 
-.boderB{
-    border-bottom: 1px solid  rgb(213, 228, 255);
+.boderB {
+    border-bottom: 1px solid rgb(213, 228, 255);
     margin-bottom: 10px;
 }
 
-.dia>span{
-    flex:auto;
+.dia>span {
+    flex: auto;
 }
 
-.dia>div{
+.dia>div {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -255,7 +257,8 @@ input {
     width: 29px;
 }
 
-.diasDiaHoy, .diasDiaManana {
+.diasDiaHoy,
+.diasDiaManana {
     border: solid 2px rgb(213, 228, 255);
     margin: 5px;
     padding: 25px;
@@ -263,12 +266,14 @@ input {
     width: 50%;
 }
 
-.diasDiaHoyIzq, .diasDiaMananaIzq{
+.diasDiaHoyIzq,
+.diasDiaMananaIzq {
     width: 50%;
     text-align: left;
 }
 
-.diasDiaHoyDer, .diasDiaMananaDer{
+.diasDiaHoyDer,
+.diasDiaMananaDer {
     width: 50%;
     /*background-color: antiquewhite;*/
     text-align: right;
@@ -316,6 +321,7 @@ tr {
     to {
         transition: scale(0.7);
     }
+
     from {
         transform: scale(1.2);
     }
@@ -327,42 +333,44 @@ tr {
 @media screen and (max-width:992px) {
 
     .contenedorIndex {
-        display: grid;  
+        display: grid;
         grid-template-columns: 100%;
-        grid-template-areas: 
-              "header"
-              "main"
-              "sidebar"
-              "footer";
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
     }
-    
+
     .header {
         grid-area: header;
     }
-    
-    .main{
+
+    .main {
         grid-area: main;
     }
-    
+
     .sidebar {
         grid-area: sidebar;
     }
 
     .footer {
-        grid-area: footer ;
-        
+        grid-area: footer;
+
     }
 
-    .homeDiaHoy{
+    .homeDiaHoy {
         padding: 10px;
     }
 
-    .imgLogo{
+    .imgLogo {
         width: 85px;
     }
-    input{
+
+    input {
         width: 35%;
     }
+
     .mtnm>div>h3 {
         font-size: 1em;
     }
@@ -371,9 +379,10 @@ tr {
         display: block;
     }
 
-    .diasDiaHoy, .diasDiaManana {
+    .diasDiaHoy,
+    .diasDiaManana {
         width: auto;
     }
 
-    
+
 }
