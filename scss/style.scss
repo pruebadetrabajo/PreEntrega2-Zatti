@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     text-decoration: none;
 }
 
@@ -19,6 +19,9 @@
 
 .body {
     background: linear-gradient(rgb(178, 222, 249), 30%, rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .contenedorIndex {
@@ -44,6 +47,7 @@
 
 .header {
     .contenedorHeader {
+        background: linear-gradient(27deg, rgba(251,251,255,1) 47%, rgba(199,245,255,1) 100%);
         .titulo{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin-left: 15px;
@@ -55,7 +59,6 @@
 
         .logo {
             width: 20%;
-
             .imgLogo {
                 width: 150px;
             }
@@ -66,8 +69,17 @@
             width: 100%;
             height: 30px;
             justify-content: center;
-            
         }
+        .buscador{
+            .input {
+                border: solid 1px gray;
+                border-radius: 10px !important;
+        
+            }
+        }
+    }
+    .navbar{
+
     }
 }
 
@@ -76,7 +88,7 @@
         .homeDiaHoy {
             @include border;
             @include borderBack;
-            padding: 10px 35px;
+            padding: 10px 34px;
             margin: 5px;
             display: flex;
                 
@@ -91,7 +103,7 @@
             .tarde,
             .noche,
             .madrugada {
-            border-left: $colorBorde;
+                @extend %tnmBorde;
 }
 
            
@@ -160,12 +172,14 @@
     }
 }
 .footer{
+    margin-top: auto;
     text-align: center;
     padding: 15px;
     grid-area: footer;
     background-color: rgb(157, 188, 241);
     .linkFooter{
         text-decoration: none;
+        color: rgb(233, 252, 255);
     }
 }
 
@@ -244,6 +258,7 @@
 }
 .temp{
     @include temp;
+    width: 30%;
     .h1Temp{
         flex: auto;
         text-align: center;
@@ -270,6 +285,7 @@
         .h1Temp{
             flex: auto;
             text-align: center;
+            width: 30%;
         }
     }
     .diasDiaMananaDer {
@@ -320,8 +336,14 @@
 /*---------MES--------------*/
 
 .calendario {
+    margin: 10px 2px 15px 2px;
+
     .semana{
+       
+        
         .diaMes {
+            border-radius: 10px !important;
+            background-color: rgb(255, 255, 255);
             box-sizing: border-box;
             width: 14%;
             height: min-content;
@@ -329,6 +351,9 @@
             margin: 3px;
             padding: 5px 0;
             text-align: center;
+        }
+        .disable{
+            background-color: rgb(230, 230, 230) ;
         }
     }
 }
@@ -374,10 +399,10 @@
         width: 75px !important;
     }
 
-    input {
+    .input {
         width: 35%;
         border: solid 1px gray;
-        border-radius: 10px;
+        border-radius: 10px !important;
 
     }
 
@@ -402,17 +427,20 @@
     .diaMes>div>img{
         width: 33px;
     }
-   
+   .contenedorNoticias{
+    display: flex;
+   }
+
 
 }
 
-
-
 @media screen and (max-width:590px) {
     .titulo{
-        font-size: 1.1em;
-        padding-left: 5px !important;;
+        font-size: 1.1em ;
+        padding-left: 5px !important;
+        width: 100%;
     }
+
    h3 {
         font-size: 0.8em !important;
     }
@@ -444,11 +472,22 @@
       
     }
     .diaMes>div>img{
-        width: 25px  !important;
-        display: block !important;
+        display: none !important;
     }
     .footer{
         display: none;
     }
-    
+   .contenedorNoticias{
+        display: block;
+       }
+    .diaPorDia{
+        padding: 2px;
+       }
+   .climaImgDiasData{
+        width: 25px;
+    }
+    .imgLogo{
+      width: 55px  !important;
+    }
+   
 }

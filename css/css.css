@@ -1,8 +1,13 @@
+.main .contenedorDatos .mtnm .tarde,
+.main .contenedorDatos .mtnm .noche,
+.main .contenedorDatos .mtnm .madrugada {
+  border-left: solid 3px #ffe2d5; }
+
 *, p, h1, h2, h3, h4, h5, h6, h7 {
   margin: 0;
   padding: 0;
   outline: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   text-decoration: none; }
 
 .flex {
@@ -12,7 +17,10 @@
   text-align: center; }
 
 .body {
-  background: linear-gradient(#b2def9, 30%, white); }
+  background: linear-gradient(#b2def9, 30%, white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
 .contenedorIndex {
   display: grid;
@@ -28,6 +36,7 @@
     grid-area: footer; }
 
 .header .contenedorHeader {
+  background: linear-gradient(27deg, #fbfbff 47%, #c7f5ff 100%);
   display: flex;
   border: solid 2px #d5e4ff;
   padding: 5px;
@@ -50,13 +59,16 @@
     width: 100%;
     height: 30px;
     justify-content: center; }
+  .header .contenedorHeader .buscador .input {
+    border: solid 1px gray;
+    border-radius: 10px !important; }
 
 .main .contenedorDatos .homeDiaHoy {
   border: solid 2px #d5e4ff;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
-  padding: 10px 35px;
+  padding: 10px 34px;
   margin: 5px;
   display: flex; }
 
@@ -69,10 +81,6 @@
   padding: 15px 0;
   display: flex;
   justify-content: center; }
-  .main .contenedorDatos .mtnm .tarde,
-  .main .contenedorDatos .mtnm .noche,
-  .main .contenedorDatos .mtnm .madrugada {
-    border-left: #d5e4ff; }
 
 .main .contenedorDatos .mtnm > div {
   text-align: center;
@@ -87,7 +95,7 @@
   text-align: left; }
   .homeDiaHoyIzq .temp {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-around;*/
     width: 25%;
     align-items: center;
     justify-items: center;
@@ -137,12 +145,14 @@
       height: 63px; }
 
 .footer {
+  margin-top: auto;
   text-align: center;
   padding: 15px;
   grid-area: footer;
   background-color: #9dbcf1; }
   .footer .linkFooter {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #e9fcff; }
 
 /*--------*/
 @keyframes imagenMovimiento {
@@ -163,7 +173,7 @@
     grid-area: main;
     display: flex; }
   .contenedorDias .diaPorDia {
-    border: solid 2px #d5e4ff;
+    border: solid 2px #ffe2d5;
     margin: 5px;
     padding: 5px;
     grid-area: tabla; }
@@ -181,7 +191,7 @@
       .contenedorDias .diaPorDia .dia span {
         flex: auto; }
     .contenedorDias .diaPorDia .boderB {
-      border-bottom: 1px solid #d5e4ff;
+      border-bottom: 1px solid #ffe2d5;
       margin-bottom: 10px; }
 
 .diasDiaHoy {
@@ -200,11 +210,12 @@
 
 .temp {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-around;*/
   width: 25%;
   align-items: center;
   justify-items: center;
-  text-align: center; }
+  text-align: center;
+  width: 30%; }
   .temp .h1Temp {
     flex: auto;
     text-align: center; }
@@ -227,14 +238,15 @@
     text-align: left; }
   .diasDiaManana .temp {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-around;*/
     width: 25%;
     align-items: center;
     justify-items: center;
     text-align: center; }
     .diasDiaManana .temp .h1Temp {
       flex: auto;
-      text-align: center; }
+      text-align: center;
+      width: 30%; }
   .diasDiaManana .diasDiaMananaDer {
     width: 50%;
     text-align: right; }
@@ -271,14 +283,20 @@
   display: flex; }
 
 /*---------MES--------------*/
-.calendario .semana .diaMes {
-  box-sizing: border-box;
-  width: 14%;
-  height: min-content;
-  border: solid 2px #d5e4ff;
-  margin: 3px;
-  padding: 5px 0;
-  text-align: center; }
+.calendario {
+  margin: 10px 2px 15px 2px; }
+  .calendario .semana .diaMes {
+    border-radius: 10px !important;
+    background-color: white;
+    box-sizing: border-box;
+    width: 14%;
+    height: min-content;
+    border: solid 2px #ffe2d5;
+    margin: 3px;
+    padding: 5px 0;
+    text-align: center; }
+  .calendario .semana .disable {
+    background-color: #e6e6e6; }
 
 /*--mwdia screen--*/
 @media screen and (max-width: 992px) {
@@ -300,10 +318,10 @@
     padding: 10px; }
   .imgLogo {
     width: 75px !important; }
-  input {
+  .input {
     width: 35%;
     border: solid 1px gray;
-    border-radius: 10px; }
+    border-radius: 10px !important; }
   .mtnm > div > h3 {
     font-size: 1em; }
   .mainDias {
@@ -314,12 +332,15 @@
   .diaMes > h3, .diaMes > div > h3 {
     font-size: 1em !important; }
   .diaMes > div > img {
-    width: 33px; } }
+    width: 33px; }
+  .contenedorNoticias {
+    display: flex; } }
 
 @media screen and (max-width: 590px) {
   .titulo {
     font-size: 1.1em;
-    padding-left: 5px !important; }
+    padding-left: 5px !important;
+    width: 100%; }
   h3 {
     font-size: 0.8em !important; }
   .mtnm > div > p {
@@ -340,7 +361,14 @@
     font-size: 0.7em !important;
     display: block !important; }
   .diaMes > div > img {
-    width: 25px  !important;
-    display: block !important; }
+    display: none !important; }
   .footer {
-    display: none; } }
+    display: none; }
+  .contenedorNoticias {
+    display: block; }
+  .diaPorDia {
+    padding: 2px; }
+  .climaImgDiasData {
+    width: 25px; }
+  .imgLogo {
+    width: 55px  !important; } }
